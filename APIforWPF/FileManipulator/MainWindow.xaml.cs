@@ -27,11 +27,11 @@ namespace FileManipulator
             InitializeComponent();
         }
 
-        private void GetAllFiles_Click(object sender, RoutedEventArgs e)
+        private async void GetAllFiles_Click(object sender, RoutedEventArgs e)
         {
             HttpClient client = new HttpClient();
 
-            client.GetAsync(@"http://localhost:59901/api/directory")
+            await client.GetAsync(@"http://localhost:59901/api/directory")
                 .ContinueWith(response =>
                 {
                     if (response.Exception != null)
