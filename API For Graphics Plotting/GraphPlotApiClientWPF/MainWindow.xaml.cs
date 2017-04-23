@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Net.Http;
+
 
 namespace GraphPlotApiClientWPF
 {
@@ -50,7 +53,7 @@ namespace GraphPlotApiClientWPF
         {
             HttpClient client = new HttpClient();
             JavaScriptSerializer jss = new JavaScriptSerializer();
-            string url = string.Format("http://localhost:53901/api/plot");
+            string url = string.Format("http://localhost:62675/api/PlotGraph");
             client.GetAsync(url).ContinueWith(resurse =>
             {
                 HttpResponseMessage message = client.GetAsync(url).Result;

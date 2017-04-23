@@ -9,7 +9,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Orientation="Vertical" Grid.Column="1" Margin="2 2 2 2">
-            <Canvas x:Name="canvas" Background="WhiteSmoke"  Height="200" Margin="10, 10, 10, 10" VerticalAlignment="Top" Width="350"/>
+            <Canvas x:Name="canvas" Background="WhiteSmoke" ClipToBounds="True" Height="200" Margin="10, 10, 10, 10" VerticalAlignment="Top" Width="350"/>
             <Button x:Name="Draw_Graph" Content="Calculate and Plot Graphic" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Click="Draw_Graph_Click" />
         </StackPanel>
 
